@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    overflow-y: auto;
+    font-family: 'Roboto Condensed',sans-serif;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 12px 128px;
+    gap: 50px;
+    width: 100%;
+}
+
+h4{
+    color: white;
+}
+
+.profile{
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile > a > img{
+    width: 120px;
+       
+}
+
+.headerInput{
+    width: 100%;
+    outline: lightblue solid 1px;
+}
+
+.config {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span{
+    font-size: 20px;
+    color: rgb(91, 164, 189);
+}
+
+.config > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.row-1, .row-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, #001233 , #002855 , #023e7d , #0353a4 , #0466c8 );
+    gap: 40px; 
+
+}
+
+.pessoa-1, .pessoa-2, .pessoa-3, .pessoa-4, .pessoa-5, .pessoa-6, .pessoa-7, .pessoa-8, .pessoa-9{
+    margin: 16px;
+    background-color: white;
+    padding: 8px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 4px 1px #00a6fb;
+    background-image: linear-gradient(to right, #001233 , #002855 , #023e7d , #0353a4 , #0466c8 );
+    color: white;
+}
+
+.pessoa-4, .pessoa-5, .pessoa-6{
+    background-image: linear-gradient(to left, #001233, #001845, #002855, #023e7d, #0353a4, #0466c8);
+}
+
+.aceitar-carona-btn{   
+        margin-left: 180px; 
+        padding: 12px;
+        border-radius: 24px;
+        border: none;
+        font-family: 'Montserrat' sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: #001233;    
+        cursor: pointer;
+        transition: transform 0.3s;
+}
+
+.aceitar-carona-btn:hover{
+    transform: scale(1.1);
+}
+
+.pessoa-1 > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.pessoa-1 > p{
+
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    
+}
+
+.pessoa-1 > a{
+    text-decoration: none;
+    display: block;
+    margin-left: 12px;
+    max-width: 145;
+}
+
+
+.pessoa-2 > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.pessoa-2 > p{
+
+    padding: 4px;
+    display: flex;
+    align-items: center;
+ 
+    flex-direction: column;
+
+}
+
+.pessoa-2 > a{
+    text-decoration: none;
+    display: block;
+    margin-left: 10px;
+}
+
+
+.pessoa-3 > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.pessoa-3 > p{
+
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.pessoa-3 > a{
+    text-decoration: none;
+    display: block;
+    margin-left: 12px;
+}
+
+.row-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #001233, #001845, #002855, #023e7d, #0353a4, #0466c8);
+    gap: 40px; 
+}
+
+.pessoa-4 > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.pessoa-4 > p{
+
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column
+}
+
+.pessoa-4 > a{
+    text-decoration: none;
+    display: block;
+    margin-left: 20px;
+}
+
+
+.pessoa-5 > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.pessoa-5 > p{
+
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column
+}
+
+.pessoa-5 > a{
+    text-decoration: none;
+    display: block;
+    margin-left: 20px;
+}
+
+.pessoa-6 > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.pessoa-6 > p{
+
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column
+}
+
+.pessoa-6 > a{
+    text-decoration: none;
+    display: block;
+
+}
+
+
+.pessoa-7 > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.pessoa-7> p{
+    
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column
+}
+
+.pessoa-7 > a{
+    text-decoration: none;
+    display: block;
+    margin-left: 16px;
+}
+
+.pessoa-8 > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.pessoa-8 > p{
+ 
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column
+}
+
+.pessoa-8 > a{
+    text-decoration: none;
+    display: block;
+    margin-left: 16px;
+}
+
+.pessoa-9 > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.pessoa-9 > p{
+    
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column
+}
+
+.pessoa-9 > a{
+    text-decoration: none;
+    display: block;
+    margin-left: 12px;
+}
+
+.rodape{
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+    color: #001c2b;
+}
+
+
+footer{
+    background-color: rgb(211, 211, 211) ;
+}
+
+.help, .sobre, .partner, .social-media{
+    margin: 20px;
+    text-align: cente;
+}
+
+.help > h3{
+    padding: 0 0 0 1px;
+    text-align: left;
+}
+
+.sobre > h3{
+    text-align: left;
+    margin: 0 0 0 12px;
+    
+}
+
+.partner > h3{
+    text-align: left;
+    margin: 0 0 0 1px;
+}
+
+.social-media > h3{
+    text-align: right;
+    margin: 0 11px;
+}
+
+
+

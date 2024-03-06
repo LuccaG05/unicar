@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro</title>
+    <link rel="stylesheet" href="styleRegistro.css">
+</head>
+<body>
+    
+    <div class="formLogin">
+            <div class="logo">
+                <img src="imagens/logo.png" alt="" width="320" height="60">
+            </div>
+       
+        <form action="indexLogin.php" method="POST">
+            <div class="registro">
+                <label for="email"></label>
+                <input type="text" id="email" name="email" placeholder="Email:" required>
+
+                <label for="Senha"></label>
+                <input type="password" id="senha" name="senha" placeholder="Senha:" required>
+
+                <label for="confSenha"></label>
+                <input type="password" id="confSenha" name="confSenha" placeholder="Confirme sua Senha:" required>
+
+                <label for="preferencias"></label>
+                <p>Preferencias de Carona</p>
+
+                <input type="radio" name="preferencias" value="homem">Homem
+                <input type="radio" name="preferencias" value="mulher">Mulher
+
+                <h2>Endereço</h2>
+                
+                <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                onblur="pesquisacep(this.value);" placeholder="CEP:" /></label><br />
+                    
+                <input name="rua" type="text" id="rua" size="60" placeholder="Rua:"/></label><br />
+                    
+                <input name="bairro" type="text" id="bairro" size="40" placeholder="Bairro:"/></label><br />
+                   
+                <input name="cidade" type="text" id="cidade" size="40" placeholder="Cidade:"/></label><br />
+                    
+                <input name="uf" type="text" id="uf" size="2" placeholder="Estado:"/></label><br />
+            </div>    
+            
+            <br>        
+                
+                <label for="checkbox">Não desejo receber notícias, promoções ou brindes do UNICAR.</label>
+                <input type="checkbox" name="checkbox" id="checkbox">
+                
+            <br>
+            
+            <a href="indexLogin.php"><input type="button" name="submit" id="btnRegistrar" value="Voltar"></a>
+            <input type="submit" name="submit" id="btnRegistrar" value="Registrar">
+        </form>
+            
+    </div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+
+    <script>var password = document.getElementById("senha")
+        , confirm_password = document.getElementById("confSenha");
+    
+    function validatePassword(){
+        if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("As senhas não coincidem");
+        } else {
+        confirm_password.setCustomValidity('');
+        }
+    }
+    
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+    </script>
+    <script>
+        
+        function limpa_formulário_cep() {
+                document.getElementById('rua').value=("");
+                document.getElementById('bairro').value=("");
+                document.getElementById('cidade').value=("");
+                document.getElementById('uf').value=("");
+                
+        }
+
+        function meu_callback(conteudo) {
+            if (!("erro" in conteudo)) {
+                document.getElementById('rua').value=(conteudo.logradouro);
+                document.getElementById('bairro').value=(conteudo.bairro);
+                document.getElementById('cidade').value=(conteudo.localidade);
+                document.getElementById('uf').value=(conteudo.uf);
+            
+            }
+            else {
+                limpa_formulário_cep();
+                alert("CEP não encontrado.");
+            }
+        }
+            
+        function pesquisacep(valor) {
+
+            var cep = valor.replace(/\D/g, '');
+
+            if (cep != "") {
+
+
+                var validacep = /^[0-9]{8}$/;
+
+                if(validacep.test(cep)) {
+
+
+                    document.getElementById('rua').value="...";
+                    document.getElementById('bairro').value="...";
+                    document.getElementById('cidade').value="...";
+                    document.getElementById('uf').value="...";
+
+                    var script = document.createElement('script');
+                    script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+                    document.body.appendChild(script);
+
+                }
+                else {
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
+            }
+            else {
+                limpa_formulário_cep();
+            }
+        };
+
+    </script>
+</body>
+</html>

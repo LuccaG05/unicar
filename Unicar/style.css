@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+body{
+    height: 100vh;
+    overflow-y: auto;
+    font-family: 'Roboto Condensed',sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 12px 128px;
+    gap: 50px;
+    width: 100%;
+}
+
+.form{
+    background-image: linear-gradient(to right, #14213d 0%, rgba(4,116,192,1) 70%);
+    padding: 72px 0 72px 0;
+}
+
+.cards{
+    padding-top: 40px;
+}
+
+.profile{
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile > a > img{
+    width: 120px;
+       
+}
+
+.headerInput{
+    width: 100%;
+    outline: lightblue solid 1px;
+}
+
+.config {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span{
+    font-size: 20px;
+    color: rgb(91, 164, 189);
+}
+
+.config > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+
+h1{
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    padding-bottom: 20px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+}
+
+
+input[type="text"]{
+    outline: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.agendar{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.agendar > p{
+    color: white;
+}
+
+
+.itens{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 48px;
+}
+
+.item1, .item2, .item3{
+    background-color: rgba(255, 255, 255, 0.89);
+    padding: 20px;
+    
+}
+
+h2{
+    text-align: center;
+    font-size: 20px;
+    color: #003049;
+    border-bottom: 1px solid rgba(4,116,192,1);
+    padding-bottom: 8px;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    padding: 12px;
+    max-width: 300px;
+    color: rgb(65, 65, 65);
+    text-align: justify;   
+}
+
+#calendario{
+    outline: none;
+    width: 100px;
+    height: 37px;
+    border-radius: 5px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px rgba(161, 161, 161, 0.048);
+    padding: 2px;
+}
+#qnt-passageiro{
+    outline: none;
+    width: 100px;
+    height: 37px;
+    border-radius: 5px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px rgba(161, 161, 161, 0.048);
+    padding: 4px;
+}
+
+.oferecer-carona{
+    background-color: #0081bd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+}
+
+.text > p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    word-break: normal;
+    font-size: 16px;
+}
+#offering-ride{
+    width: 450px;
+    margin-left: 120px;
+
+}
+
+.offering-ride-btn{   
+    margin-top: 5px; 
+    padding: 16px;
+    border-radius: 24px;
+    border: none;
+    font-family: 'Montserrat' sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0081bd;    
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.offering-ride-btn:hover{
+    transform: scale(1.1);
+}
+
+.solicitando-carona{
+    background-color: #14213d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.text2{
+    color: white;
+    text-align: center;
+   
+}
+
+.text2 > h3{
+    font-size: 24px;
+    text-align: left;
+}
+
+.text2 > p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+#requesting-ride{
+    margin-right: 120px;
+    width: 450px;
+    transform: scaleX(-1);
+}
+
+.requesting-ride-btn{
+    margin-top: 5px;
+    padding: 16px;
+    border-radius: 24px;
+    border: none;
+    font-family: 'Montserrat' sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #14213d;    
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.requesting-ride-btn:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    background-color: rgb(211, 211, 211) ;
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+    color: #001c2b;
+}
+
+.help, .sobre, .partner, .social-media{
+    margin: 20px;
+    text-align: center;
+}
+
+.help > h3{
+    padding: 0 0 0 12px;
+    text-align: left;
+}
+
+.sobre > h3{
+    text-align: left;
+    margin: 0 0 0 12px;
+    
+}
+
+.partner > h3{
+    text-align: left;
+    margin: 0 0 0 12px;
+}
+
+.social-media > h3{
+    text-align: right;
+    margin: 0 11px;
+}
